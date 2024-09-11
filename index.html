@@ -233,95 +233,103 @@
             <h2>Exemplo Avançado de Código Ruby</h2>
             <p>Este exemplo mais avançado ilustra a criação de um sistema de gerenciamento de biblioteca usando Ruby. Inclui a definição de classes e a manipulação de arrays.</p>
             <pre>
-                # Define a classe Livro para representar um livro individual
-                class Livro
-                  attr_accessor :titulo, :autor, :disponivel
+       class Livro
+  attr_accessor :titulo, :autor, :disponivel
 
-                  # O construtor da classe recebe o título e o autor do livro
-                  def initialize(titulo, autor)
-                    @titulo = titulo
-                    @autor = autor
-                    @disponivel = true # Inicialmente, todos os livros estão disponíveis
-                  end
+  def initialize(titulo, autor)
+    @titulo = titulo
+    @autor = autor
+    @disponivel = true
+  end
 
-                  # Método para exibir o livro de forma amigável
-                  def to_s
-                    status = @disponivel ? "Disponível" : "Emprestado"
-                    "#{@titulo} por #{@autor} - #{status}"
-                  end
-                end
+  def to_s
+    status = @disponivel ? "Disponível" : "Emprestado"
+    "#{@titulo} por #{@autor} - #{status}"
+  end
+end
 
-                # Define a classe Biblioteca para gerenciar um conjunto de livros
-                class Biblioteca
-                  def initialize
-                    # Inicia um array vazio para armazenar os livros
-                    @livros = []
-                  end
+class Biblioteca
+  def initialize
+    @livros = []
+  end
 
-                  # Método para adicionar um novo livro à biblioteca
-                  def adicionar_livro(titulo, autor)
-                    livro = Livro.new(titulo, autor)
-                    @livros.push(livro)
-                    puts "Livro '#{titulo}' adicionado com sucesso."
-                  end
+  def adicionar_livro(titulo, autor)
+    livro = Livro.new(titulo, autor)
+    @livros.push(livro)
+    puts "Livro '#{titulo}' adicionado com sucesso."
+  end
 
-                  # Método para emprestar um livro pelo título
-                  def emprestar_livro(titulo)
-                    livro = @livros.find { |l| l.titulo == titulo && l.disponivel }
-                    if livro
-                      livro.disponivel = false
-                      puts "Livro '#{titulo}' emprestado com sucesso."
-                    else
-                      puts "Livro não disponível ou não encontrado."
-                    end
-                  end
+  def emprestar_livro(titulo)
+    livro = @livros.find { |l| l.titulo == titulo && l.disponivel }
+    if livro
+      livro.disponivel = false
+      puts "Livro '#{titulo}' emprestado com sucesso."
+    else
+      puts "Livro não disponível ou não encontrado."
+    end
+  end
 
-                  # Método para retornar um livro pelo título
-                  def retornar_livro(titulo)
-                    livro = @livros.find { |l| l.titulo == titulo && !l.disponivel }
-                    if livro
-                      livro.disponivel = true
-                      puts "Livro '#{titulo}' retornado com sucesso."
-                    else
-                      puts "Livro não encontrado ou não está emprestado."
-                    end
-                  end
+  def retornar_livro(titulo)
+    livro = @livros.find { |l| l.titulo == titulo && !l.disponivel }
+    if livro
+      livro.disponivel = true
+      puts "Livro '#{titulo}' retornado com sucesso."
+    else
+      puts "Livro não encontrado ou não está emprestado."
+    end
+  end
 
-                  # Método para listar todos os livros na biblioteca
-                  def listar_livros
-                    if @livros.empty?
-                      puts "Nenhum livro na biblioteca."
-                    else
-                      puts "Lista de Livros:"
-                      @livros.each do |livro|
-                        puts livro
-                      end
-                    end
-                  end
-                end
+  def listar_livros
+    if @livros.empty?
+      puts "Nenhum livro na biblioteca."
+    else
+      puts "Lista de Livros:"
+      @livros.each do |livro|
+        puts livro
+      end
+    end
+  end
+end
 
-                # Cria uma instância da biblioteca
-                biblioteca = Biblioteca.new
+def menu
+  puts "Escolha uma opção:"
+  puts "1. Adicionar livro"
+  puts "2. Emprestar livro"
+  puts "3. Retornar livro"
+  puts "4. Listar livros"
+  puts "5. Sair"
+end
 
-                # Adiciona alguns livros à biblioteca
-                biblioteca.adicionar_livro("1984", "George Orwell")
-                biblioteca.adicionar_livro("O Senhor dos Anéis", "J.R.R. Tolkien")
-                biblioteca.adicionar_livro("A Revolução dos Bichos", "George Orwell")
+biblioteca = Biblioteca.new
 
-                # Lista todos os livros
-                biblioteca.listar_livros
+loop do
+  menu
+  opcao = gets.chomp.to_i
 
-                # Empresta um livro
-                biblioteca.emprestar_livro("1984")
-
-                # Lista os livros novamente para ver o status atualizado
-                biblioteca.listar_livros
-
-                # Retorna o livro emprestado
-                biblioteca.retornar_livro("1984")
-
-                # Lista os livros novamente para mostrar a atualização após retorno
-                biblioteca.listar_livros
+  case opcao
+  when 1
+    print "Digite o título do livro: "
+    titulo = gets.chomp
+    print "Digite o autor do livro: "
+    autor = gets.chomp
+    biblioteca.adicionar_livro(titulo, autor)
+  when 2
+    print "Digite o título do livro para emprestar: "
+    titulo = gets.chomp
+    biblioteca.emprestar_livro(titulo)
+  when 3
+    print "Digite o título do livro para retornar: "
+    titulo = gets.chomp
+    biblioteca.retornar_livro(titulo)
+  when 4
+    biblioteca.listar_livros
+  when 5
+    puts "Saindo..."
+    break
+  else
+    puts "Opção inválida. Tente novamente."
+  end
+end
             </pre>
             <p>Este exemplo ilustra o uso de classes e métodos para gerenciar livros em uma biblioteca. A classe <code>Livro</code> representa um livro com atributos de título, autor e disponibilidade. A classe <code>Biblioteca</code> gerencia uma coleção de livros, permitindo adicionar, emprestar, retornar e listar livros. O código mostra como criar instâncias dessas classes e interagir com elas.</p>
         </section>
