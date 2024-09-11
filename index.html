@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Descubra Ruby</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #2c3e50; /* Fundo mais escuro */
+            color: #ecf0f1; /* Texto contrastante */
+        }
+
+        header, footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-align: center; /* Centralizar o título do header */
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1e272e; /* Fundo mais escuro para o conteúdo */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2, h3 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center; /* Centralizar os títulos */
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify; /* Justificar o texto */
+        }
+
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #34495e;
+            padding: 15px;
+            border: 1px solid #7f8c8d;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 315px;
+            border: none;
+        }
+
+        .video-container p {
+            margin: 5px 0 0;
+            font-weight: bold;
+            text-align: center; /* Centralizar a legenda do vídeo */
+        }
+
+        .image-container, .programmer-images {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img, .programmer-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 10px 0;
+        }
+
+        .programmer-images img {
+            max-width: 30%;
+            margin: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LINGUAGEM RUBY</h1>
+    </header>
+
+    <div class="content-container">
+        <section id="introducao-ruby">
+            <h2>O que é Ruby?</h2>
+            <p>Ruby é uma linguagem de programação orientada a objetos criada por Yukihiro Matsumoto. Lançada em 1995, Ruby se destaca por sua simplicidade e elegância, permitindo uma abordagem intuitiva e criativa para a programação. Sua sintaxe fluida e poderosa facilita a escrita de código claro e eficiente, promovendo a produtividade dos desenvolvedores.</p>
+
+            <div class="image-container">
+                <img src="https://www.ruby-lang.org/images/header-ruby-logo.png" alt="Logo Ruby">
+            </div>
+
+            <h3>Por que Ruby se Destaca?</h3>
+            <p>
+            <strong>1. Paradigma de Orientação a Objetos:</strong><br>
+            Ruby adota o paradigma de orientação a objetos, onde cada valor é um objeto, oferecendo uma estrutura coesa e intuitiva para a programação.
+            </p>
+            <p>
+            <strong>2. Flexibilidade e Personalização:</strong><br>
+            Ruby permite que os desenvolvedores modifiquem a linguagem e suas bibliotecas, oferecendo flexibilidade para adaptar a linguagem às necessidades específicas de um projeto.
+            </p>
+            <p>
+            <strong>3. Ruby on Rails:</strong><br>
+            Ruby é amplamente associado ao framework Ruby on Rails, uma ferramenta que simplifica e acelera o desenvolvimento de aplicações web, seguindo o princípio de "não se repita" e "convenção sobre configuração".
+            </p>
+            <p>
+            <strong>4. Ecosystem e Comunidade:</strong><br>
+            Ruby possui uma rica coleção de bibliotecas e uma comunidade ativa que contribui para a melhoria contínua da linguagem e do ecossistema ao seu redor.
+            </p>
+
+            <div class="programmer-images">
+                <img src="https://images.pexels.com/photos/3740745/pexels-photo-3740745.jpeg" alt="Programador 1">
+                <img src="https://images.pexels.com/photos/4063797/pexels-photo-4063797.jpeg" alt="Programador 2">
+                <img src="https://images.pexels.com/photos/3735434/pexels-photo-3735434.jpeg" alt="Programador 3">
+            </div>
+
+            <h3>Usos Comuns de Ruby</h3>
+            <p>Ruby é versátil e pode ser utilizado em diversas áreas, como:</p>
+            <ul>
+                <li><strong>Desenvolvimento de Aplicações Web</strong>: Utilizando o Ruby on Rails para construir e escalar aplicativos web com eficiência.</li>
+                <li><strong>Automação e Scripts</strong>: Ruby é eficaz para tarefas automatizadas e scripts que facilitam processos repetitivos.</li>
+                <li><strong>Desenvolvimento de APIs</strong>: Facilita a criação de interfaces de programação de aplicações robustas e escaláveis.</li>
+                <li><strong>Educação e Prototipagem</strong>: Ideal para aprendizado de conceitos de programação e desenvolvimento rápido de protótipos.</li>
+            </ul>
+
+            <h3>Vantagens de Usar Ruby</h3>
+            <p>
+            <strong>1. Legibilidade e Simplicidade:</strong> A sintaxe de Ruby é projetada para ser clara e próxima ao pensamento humano.<br>
+            <strong>2. Produtividade:</strong> Ruby oferece ferramentas e frameworks que aceleram o desenvolvimento de software.<br>
+            <strong>3. Comunidade e Suporte:</strong> A ampla comunidade Ruby fornece suporte e recursos valiosos.
+            </p>
+        </section>
+
+        <section id="pros-contras">
+            <h2>Vantagens e Desvantagens</h2>
+            <h3>Vantagens:</h3>
+            <ul>
+                <li>Sintaxe amigável e fácil de entender.</li>
+                <li>Desenvolvimento ágil com frameworks como Ruby on Rails.</li>
+                <li>Comunidade colaborativa e recursos abundantes.</li>
+                <li>Excelente para prototipagem rápida e desenvolvimento ágil.</li>
+            </ul>
+            <h3>Desvantagens:</h3>
+            <ul>
+                <li>Desempenho relativamente menor em comparação com linguagens compiladas.</li>
+                <li>Menos popular em algumas áreas, como desenvolvimento de sistemas críticos.</li>
+                <li>Algumas ferramentas e bibliotecas podem ter menos suporte comparadas a outras linguagens.</li>
+            </ul>
+        </section>
+
+        <section id="instalacao">
+            <h2>Como Instalar Ruby</h2>
+            <p>Para instalar Ruby, visite o site oficial <a href="https://www.ruby-lang.org/pt/" target="_blank">Ruby</a> e siga as instruções detalhadas para o seu sistema operacional.</p>
+        </section>
+
+        <section id="exemplo">
+            <h2>Exemplo Básico de Código Ruby</h2>
+            <p>Abaixo está um exemplo básico de código Ruby que demonstra como criar e utilizar uma classe simples. Este exemplo ajuda a entender a criação de classes e métodos em Ruby.</p>
+            <pre>
+                # Define uma classe simples chamada Pessoa
+                class Pessoa
+                  # Atributos que podem ser lidos e escritos
+                  attr_accessor :nome, :idade
+
+                  # O construtor inicializa o nome e a idade da pessoa
+                  def initialize(nome, idade)
+                    @nome = nome
+                    @idade = idade
+                  end
+
+                  # Método para exibir uma mensagem com o nome e a idade da pessoa
+                  def apresentar
+                    puts "Olá, meu nome é #{@nome} e eu tenho #{@idade} anos."
+                  end
+                end
+
+                # Cria uma nova instância da classe Pessoa
+                pessoa = Pessoa.new("Ana", 30)
+
+                # Chama o método para exibir a mensagem
+                pessoa.apresentar
+            </pre>
+            <p>Este exemplo ilustra a definição de uma classe básica em Ruby e a criação de uma instância dessa classe. A classe <code>Pessoa</code> possui atributos <code>nome</code> e <code>idade</code>, que são inicializados através do construtor <code>initialize</code>. O método <code>apresentar</code> exibe uma mensagem com os atributos da pessoa.</p>
+        </section>
+
+        <section id="exemplo-avancado">
+            <h2>Exemplo Avançado de Código Ruby</h2>
+            <p>Este exemplo mais avançado ilustra a criação de um sistema de gerenciamento de biblioteca usando Ruby. Inclui a definição de classes e a manipulação de arrays.</p>
+            <pre>
+                # Define a classe Livro para representar um livro individual
+                class Livro
+                  attr_accessor :titulo, :autor, :disponivel
+
+                  # O construtor da classe recebe o título e o autor do livro
+                  def initialize(titulo, autor)
+                    @titulo = titulo
+                    @autor = autor
+                    @disponivel = true # Inicialmente, todos os livros estão disponíveis
+                  end
+
+                  # Método para exibir o livro de forma amigável
+                  def to_s
+                    status = @disponivel ? "Disponível" : "Emprestado"
+                    "#{@titulo} por #{@autor} - #{status}"
+                  end
+                end
+
+                # Define a classe Biblioteca para gerenciar um conjunto de livros
+                class Biblioteca
+                  def initialize
+                    # Inicia um array vazio para armazenar os livros
+                    @livros = []
+                  end
+
+                  # Método para adicionar um novo livro à biblioteca
+                  def adicionar_livro(titulo, autor)
+                    livro = Livro.new(titulo, autor)
+                    @livros.push(livro)
+                    puts "Livro '#{titulo}' adicionado com sucesso."
+                  end
+
+                  # Método para emprestar um livro pelo título
+                  def emprestar_livro(titulo)
+                    livro = @livros.find { |l| l.titulo == titulo && l.disponivel }
+                    if livro
+                      livro.disponivel = false
+                      puts "Livro '#{titulo}' emprestado com sucesso."
+                    else
+                      puts "Livro não disponível ou não encontrado."
+                    end
+                  end
+
+                  # Método para retornar um livro pelo título
+                  def retornar_livro(titulo)
+                    livro = @livros.find { |l| l.titulo == titulo && !l.disponivel }
+                    if livro
+                      livro.disponivel = true
+                      puts "Livro '#{titulo}' retornado com sucesso."
+                    else
+                      puts "Livro não encontrado ou não está emprestado."
+                    end
+                  end
+
+                  # Método para listar todos os livros na biblioteca
+                  def listar_livros
+                    if @livros.empty?
+                      puts "Nenhum livro na biblioteca."
+                    else
+                      puts "Lista de Livros:"
+                      @livros.each do |livro|
+                        puts livro
+                      end
+                    end
+                  end
+                end
+
+                # Cria uma instância da biblioteca
+                biblioteca = Biblioteca.new
+
+                # Adiciona alguns livros à biblioteca
+                biblioteca.adicionar_livro("1984", "George Orwell")
+                biblioteca.adicionar_livro("O Senhor dos Anéis", "J.R.R. Tolkien")
+                biblioteca.adicionar_livro("A Revolução dos Bichos", "George Orwell")
+
+                # Lista todos os livros
+                biblioteca.listar_livros
+
+                # Empresta um livro
+                biblioteca.emprestar_livro("1984")
+
+                # Lista os livros novamente para ver o status atualizado
+                biblioteca.listar_livros
+
+                # Retorna o livro emprestado
+                biblioteca.retornar_livro("1984")
+
+                # Lista os livros novamente para mostrar a atualização após retorno
+                biblioteca.listar_livros
+            </pre>
+            <p>Este exemplo ilustra o uso de classes e métodos para gerenciar livros em uma biblioteca. A classe <code>Livro</code> representa um livro com atributos de título, autor e disponibilidade. A classe <code>Biblioteca</code> gerencia uma coleção de livros, permitindo adicionar, emprestar, retornar e listar livros. O código mostra como criar instâncias dessas classes e interagir com elas.</p>
+        </section>
+
+        <section id="videos">
+            <h2>Vídeos Tutoriais</h2>
+            <p>Confira os seguintes vídeos para uma introdução visual ao Ruby:</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/OdTxiWEBu5g?feature=shared" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Vídeo 1</p>
+            </div>
+            <div class="video-container">
+                <iframe src="https://youtu.be/1LoL7xKq8Mw?feature=shared" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Vídeo 2</p>
+            </div>
+            <div class="video-container">
+                <iframe src="https://youtube.com/shorts/t4csX9-aKcI?feature=shared" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Vídeo 3</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Matheus Cortez e Cristian Sousa</p>
+    </footer>
+</body>
+</html>
